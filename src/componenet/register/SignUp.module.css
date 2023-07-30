@@ -1,0 +1,163 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: linear-gradient(to bottom right, #003333, #006666);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+  width: 50%;
+
+  align-items: center;
+  background: #0874747c;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 40px;
+}
+.heading{
+ margin-top: 2rem;
+}
+.inputBox {
+  
+  width: 20rem;
+  padding: 10px;
+}
+
+.label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+.icon {
+  position: absolute;
+
+  right: 39%;
+  margin-top: 20px;
+  transform: translateY(-50%);
+  color: #ccc;
+}
+.icons {
+  color: green;
+  font-size: 1.5rem;
+}
+.btn{
+  display: flex;
+  width: 18rem;
+  height: 2rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  margin-top: 1rem;
+}
+.btn button{
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  color: black;
+  background: #007bff;
+  border-radius: 5px;
+}
+.btn button:hover{
+  color: white;
+  transition: color .2s;
+  background-color: black;
+  cursor: pointer;
+}
+.singinlink{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  bottom: 5%;
+  opacity: .89;
+
+}
+.singinlink p {
+  font-size: 18px;
+  text-align: center;
+  opacity: .4;
+}
+.singinlink p a {
+  color: #007bff; 
+  text-decoration: none;
+  font-weight: bold; 
+}
+.singinlink p a:hover {
+  text-decoration: underline; 
+}
+
+
+.forgot {
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+ 
+}
+
+.forgot p {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+  color: #007bff;
+  cursor: pointer;
+}
+
+.forgot p:hover {
+  text-decoration: underline; 
+}
+@media screen and (max-width: 768px) {
+.form{
+  width: 90%;
+  gap: 1rem;
+}
+.inputBox{
+  width: 80%;
+
+}
+.inputBox input{
+ height: 100%;
+ 
+}
+.icon{
+  right: 22%;
+  margin-top: 30px;
+}
+.singinlink{
+  bottom: 1.5%;
+}
+.btn{
+  width: 70%;
+}
+.btn buttton{
+  width: 70%;
+}
+}
+@media screen and (max-width: 400px){
+  .form{
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  .singinlink {
+    bottom: -5%;
+  }
+  .btn button{
+    font-size: 1rem;
+  }
+}
+
