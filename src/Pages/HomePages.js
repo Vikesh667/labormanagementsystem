@@ -3,9 +3,12 @@ import style from "./HomePages.module.css";
 import Header from "../componenet/header/Header";
 import Home from "../componenet/home/Home";
 import About from "../componenet/about/About";
+import ContactUs from "../componenet/contact/ContactUs";
+import { Footer } from "../componenet/Footer";
+
 const HomePages = () => {
   return (
-    <div>
+    <>
     <Header/>
      <section id="home">
       <Home />
@@ -13,7 +16,11 @@ const HomePages = () => {
       <section id="about">
      <About />
      </section>
-    </div>
+     <section id="contact">
+   <ContactUs/>
+     </section>
+     <Footer/>
+    </>
   );
 };
 

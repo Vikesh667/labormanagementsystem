@@ -5,7 +5,7 @@
 }
 html{
   scroll-behavior: smooth;
-  transition-duration: 2s;
+  transition-delay: .2s;
 }
 .heading h1{
   color: #ff6347;
