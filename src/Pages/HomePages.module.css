@@ -5,22 +5,35 @@
 }
 
 
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
+
+.HomePages {
+ 
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
 }
 
-.homeSection {
-  background-color: #f0f0f0;
-  padding: 20px;
+/* Styles for screens smaller than or equal to 768px */
+@media (max-width: 768px) {
+  .HomePages {
+  
+    width: 100%;
+  }
+}
+@media (max-width: 400px) {
+  .HomePages {
+    
+    width: 100%;
+  }
 }
 
-.aboutSection {
-  background-color: #eaeaea;
-  padding: 20px;
-}
+
+
+
+
 
 
 

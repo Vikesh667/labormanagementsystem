@@ -8,19 +8,19 @@ import { Footer } from "../componenet/Footer";
 
 const HomePages = () => {
   return (
-    <>
-    <Header/>
-     <section id="home">
-      <Home />
+    <div className={style.HomePages}>
+      <Header />
+      <section id="home">
+        <Home />
       </section>
       <section id="about">
-     <About />
-     </section>
-     <section id="contact">
-   <ContactUs/>
-     </section>
-     <Footer/>
-    </>
+        <About />
+      </section>
+      <section id="contact">
+        <ContactUs />
+      </section>
+      <Footer />
+    </div>
   );
 };
 
