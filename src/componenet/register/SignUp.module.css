@@ -1,9 +1,10 @@
 .container {
   width: 100vw;
-  background-color: #2c2c2c;
+  background-image: linear-gradient(to bottom right, #003333, #006666);
   display: flex;
   justify-content: center;
   height: 100vh;
+
 }
 .formcontainer {
   display: flex;
