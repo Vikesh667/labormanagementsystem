@@ -1,72 +1,119 @@
 import React from "react";
-import { BsFillEnvelopeFill, BsCheck2 } from "react-icons/bs";
-import style from "./SignUp.module.css";
-import { RiLockPasswordFill } from "react-icons/ri";
-import { FcBusinessman } from "react-icons/fc";
-import { useState } from "react";
+import style from "./SignUp.module.css"
 import { Link } from "react-router-dom";
 const SignUp = () => {
-  const [name, setName] = useState("");
-  const [password, setPassword] = useState("");
-  const [email, setEmail] = useState("");
   return (
     <div className={style.container}>
-      <form className={style.form}>
+      <form className={style.formcontainer}>
         <div className={style.heading}>
-          <p>SignUp Page</p>
+          <h2>Sign Up </h2>
         </div>
-        <div className={style.inputBox}>
-          <label className={style.label}>Name</label>
+      <div className={style.leftForm}>
+        <div className={style.formgroup}>
+          <label>Name:</label>
           <input
             type="text"
-            className={style.input}
-            value={name}
-            onChange={(e) => setName(e.target.value)}
+            name="name"
+            // value={formData.name}
+            // onChange={handleChange}
+            required
           />
-          <span className={style.icon}>
-            {!name ? <FcBusinessman /> : <BsCheck2 className={style.icons} />}
-          </span>
         </div>
-        <div className={style.inputBox}>
-          <label className={style.label}>Email</label>
+        <div className={style.formgroup}>
+          <label>Email:</label>
           <input
             type="email"
-            className={style.input}
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            name="email"
+            // value={formData.email}
+            // onChange={handleChange}
+            required
           />
-          <span className={style.icon}>
-            {!email ? (
-              <BsFillEnvelopeFill />
-            ) : (
-              <BsCheck2 className={style.icons} />
-            )}
-          </span>
         </div>
-        <div className={style.inputBox}>
-          <label className={style.label}>Password</label>
+        <div className={style.formgroup}>
+          <label>Phone:</label>
           <input
-            type="password"
-            className={style.input}
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            type="tel"
+            name="phone"
+            // value={formData.phone}
+            // onChange={handleChange}
+            required
           />
-          <span className={style.icon}>
-            {!password && <RiLockPasswordFill />}
-          </span>
         </div>
-        <div className={style.forgot}>
-          <p>Forgot Password</p>
+        <div className={style.formgroup}>
+          <label>Age:</label>
+          <input
+            type="number"
+            name="age"
+            // value={formData.age}
+            // onChange={handleChange}
+            required
+          />
+        </div>
+        </div>
+        <div className={style.rigthForm}>
+        <div className={style.formgroup}>
+          <label>Category:</label>
+          <select
+            name="category"
+            // value={formData.category}
+            // onChange={handleChange}
+            required
+          >
+            <option value="">Select category</option>
+            <option value="Category 1">Category 1</option>
+            <option value="Category 2">Category 2</option>
+            {/* Add more options as needed */}
+          </select>
+        </div>
+        <div className={style.formgroup}>
+          <label>Gender:</label>
+          <select
+            name="gender"
+            // value={formData.gender}
+            // onChange={handleChange}
+            required
+          >
+            <option value="">Select gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div className={style.formgroup}>
+          <label>Experience:</label>
+          <select
+            name="experience"
+            // value={formData.experience}
+            // onChange={handleChange}
+            required
+          >
+            <option value="">Select experience</option>
+            <option value="Less than 1 year">Less than 1 year</option>
+            <option value="1-3 years">1-3 years</option>
+            <option value="3-5 years">3-5 years</option>
+            {/* Add more options as needed */}
+          </select>
+        </div>
+        <div className={style.formgroup}>
+          <label>Field:</label>
+          <select
+            name="field"
+            // value={formData.field}
+            // onChange={handleChange}
+            required
+          >
+            <option value="">Select field</option>
+            <option value="Field 1">Field 1</option>
+            <option value="Field 2">Field 2</option>
+            {/* Add more options as needed */}
+          </select>
+        </div>
         </div>
         <div className={style.btn}>
-          <button>Submit</button>
+          <button >submit</button>
+          <p>if you an account <Link>SigIn</Link></p>
         </div>
       </form>
-      <div className={style.singinlink}>
-        <p>
-          If you have account ?<Link>SigIn</Link>
-        </p>
-      </div>
     </div>
   );
 };
