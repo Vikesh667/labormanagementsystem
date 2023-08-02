@@ -10,7 +10,7 @@
   display: flex;
   padding: 50px;
   border-radius: 10px;
-  background-color: #f0f0f0;
+  background-image: linear-gradient(to bottom right, #002b33, #006666ed);
   animation: fadeIn 1s ease-in-out;
   min-width: 80vw;
   gap: 1rem;
@@ -50,7 +50,7 @@
   position: absolute;
   overflow: hidden;
   margin-top: 20px;
-  bottom: 15%;
+  bottom: 5%;
   left: 43%;
   gap: 1rem;
 }
@@ -140,7 +140,7 @@ p a:hover::before {
     margin-bottom: 10px;
   }
   .btn {
-    bottom: -2%;
+    bottom: 5%;
     flex-direction: row;
     align-items: center;
     margin-left: 2.5rem;
