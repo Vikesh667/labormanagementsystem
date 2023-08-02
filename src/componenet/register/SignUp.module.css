@@ -169,5 +169,7 @@ p a:hover::before {
     width: 100%;
     justify-content: space-around;
     bottom: -1%;
+    position: relative;
   }
+
 }
