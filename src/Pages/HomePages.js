@@ -19,7 +19,7 @@ const HomePages = () => {
       <section id="contact">
         <ContactUs />
       </section>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

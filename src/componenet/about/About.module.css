@@ -39,12 +39,14 @@ html{
   font-size: 38px;
   margin-bottom: 20px;
   color: #333;
+  
 }
 .contenet p{
   font-size: 24px;
   line-height: 1.5;
   margin-bottom: 40px;
   color: #666;
+  text-align: start;
 }
 .images{
   flex: 1;
@@ -80,6 +82,7 @@ html{
   }
   .aboutuscontainer{
     margin: 0px;
+    overflow-y: scroll;
     
   }
   .container{
@@ -87,6 +90,7 @@ html{
     flex-direction: column;
     margin: 0px;
     padding: 0px 40px;
+    overflow-y: scroll;
   }
   .container2{
     width: 100%;
@@ -106,6 +110,7 @@ html{
   .contenet p{
     font-size: 16px;
     margin-bottom: 20px;
+    text-align: start;
   }
   .btn{
     font-size: 16px;
