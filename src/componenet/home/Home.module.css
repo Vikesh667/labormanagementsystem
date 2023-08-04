@@ -1,19 +1,17 @@
 .maincontent {
   position: relative;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 80vh;
-  width: vw;
-  background-image: linear-gradient(to bottom right, #003333, #006666);
+  height: 95vh;
   color: #fff;
   text-align: center;
   margin-top: 5rem;
-  overflow-y: scroll;
+  flex-direction: column;
 }
 
 .container {
   padding: 20px;
+  position: absolute;
+  top: 20%;
 }
 
 .container h1 {
@@ -25,7 +23,24 @@ p {
   font-size: 1.2rem;
   margin-bottom: 1.5rem;
 }
-
+.crousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+}
+.crousel span {
+  width: 10px;
+  height: 10px;
+  margin-left: 10px;
+  border: 2px rgb(250, 241, 241);
+  background-color: #ccc;
+  border-radius: 100%;
+  cursor: pointer;
+  box-shadow: 3px 2px 2px rgb(red, green, blue);
+}
 .btn {
   display: inline-block;
   background-color: #ff6600;

@@ -1,45 +1,59 @@
-import React from "react";
-import Slider from "react-slick";
-import style from "./ImageSlider.module.css";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-
-const ImageSlider = () => {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
+import React, { useState, useEffect } from 'react';
+import images from '../data';
+import style from "./ImageSlider.module.css"
+const Back = () => {
+  const [currentState, setCurrentState] = useState(0);
+  console.log(images[0].url);
+  const bgImageStyle = {
+    backgroundImage: `url(${images[currentState].url})`,
+    backgroundPosition: 'center',
+    backgroundSize: 'cover',
+    height: '100%',
+    Transition: 'backgroundImage .2s',
   };
-
+  const goToNext = (currentState) => {
+    setCurrentState(currentState);
+  };
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (currentState === 3) {
+        setCurrentState(0);
+      } else {
+        setCurrentState(currentState + 1);
+      }
+    }, 2000);
+    return () => clearTimeout(timer);
+  }, [currentState]);
   return (
-    <div className={style.slidercontainer}>
-      <Slider {...settings} >
-        <div>
-          <img
-            src="https://images.unsplash.com/photo-1559175607-aff9d008ffa8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=869&q=80"
-            alt="Image 1"
-          />
-        </div>
-        <div >
-          <img
-            src="https://images.unsplash.com/photo-1591260315238-79ee54d55fc5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=867&q=80"
-            alt="Image 2"
-          />
-        </div>
-        <div >
-          <img
-            src="https://images.unsplash.com/photo-1535090467336-9501f96eef89?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=900&q=80"
-            alt="Image 3"
-          />
-        </div>
-        {/* Add more images here */}
-      </Slider>
+    <div className={style.containers}>
+      <div style={bgImageStyle}></div>
+      <div className={style.container}>
+        <h1>Welcome to the Labor Management System</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+          interdum euismod dui, at fermentum metus ultricies at. Suspendisse
+          potenti. Quisque fringilla velit et felis luctus interdum. Sed
+          suscipit feugiat justo, sit amet tincidunt elit vulputate sit amet.
+        </p>
+        <p>
+          Vestibulum a consectetur elit. Etiam nec blandit dui, nec euismod
+          nisi. Praesent eu lorem vitae risus pharetra sagittis. Sed
+          sollicitudin, elit at ullamcorper lacinia, mi neque facilisis enim,
+          sit amet auctor odio nunc a felis.
+        </p>
+        {/* <button className={st.btn} onClick={handleClick}>
+          <Link to="/signup">Join Us</Link>
+        </button> */}
+      </div>
+      <div className="crousel-boult">
+        {images.map((image, currentState) => (
+          <span
+            key={currentState}
+            onClick={() => goToNext(currentState)}
+          ></span>
+        ))}
+      </div>
     </div>
   );
 };
-
-export default ImageSlider;
+export default Back;
