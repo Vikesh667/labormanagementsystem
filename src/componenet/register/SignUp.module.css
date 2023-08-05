@@ -1,176 +1,65 @@
+/* SignUp.module.css */
+
 .container {
-  width: 100vw;
-  background-image: linear-gradient(to bottom right, #003333, #006666);
   display: flex;
   justify-content: center;
+  align-items: center;
   height: 100vh;
+}
 
-}
 .formcontainer {
-  display: flex;
-  padding: 50px;
-  border-radius: 10px;
-  background-image: linear-gradient(to bottom right, #002b33, #006666ed);
-  animation: fadeIn 1s ease-in-out;
-  min-width: 80vw;
-  gap: 1rem;
-  margin: 3rem;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
 }
+
 .heading {
-  position: absolute;
-  top: 10%;
-  left: 46%;
-  font-weight: normal;
+  text-align: center;
+  margin-bottom: 20px;
 }
-.heading h1 {
-  font-size: large;
-}
-.leftForm,
-.rigthForm {
-  margin: 2rem;
-  width: 350px;
-}
+
 .formgroup {
   margin-bottom: 15px;
 }
-.formgroup label {
+
+.label {
   display: block;
   margin-bottom: 5px;
 }
-.formgroup input,
-.formgroup select {
+
+.input {
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
-}
-.btn {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  overflow: hidden;
-  margin-top: 20px;
-  bottom: 5%;
-  left: 43%;
-  gap: 1rem;
+  font-size: 16px;
 }
 
-.btn button {
+.btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+button {
   background-color: #007bff;
   color: #fff;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: transform 0.3s ease-in-out;
-}
-
-.btn button:hover {
-  transform: scale(1.1);
-}
-
-.btn button::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.2);
-  z-index: -1;
-  transition: left 0.3s ease-in-out;
-}
-
-.btn button:hover::before {
-  left: 0;
-}
-/* CSS Styles */
-p {
   font-size: 16px;
-  color: #333;
-  text-align: center;
-  margin-top: 20px;
 }
 
-p a {
-  color: #007bff;
-  text-decoration: none;
-  position: relative;
+button:hover {
+  background-color: #0056b3;
 }
 
-.btn p a::before {
-  content: "";
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: #007bff;
-  visibility: hidden;
-  transform: scaleX(0);
-  transition: all 0.2s ease-in-out;
+p {
+  margin: 0;
 }
 
-p a:hover::before {
-  visibility: visible;
-  transform: scaleX(1);
-}
-
-@media screen and (max-width: 800px) {
-  .formcontainer {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    flex-direction: column;
-    align-items: center;
-    padding: 0;
-    gap: 0;
-    overflow-y: scroll;
-  }
-  .heading {
-    top: 2%;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .rigthForm {
-    margin-top: -1rem;
-  }
-  .formgroup {
-    margin-bottom: 10px;
-  }
-  .btn {
-    bottom: 5%;
-    flex-direction: row;
-    align-items: center;
-    margin-left: 2.5rem;
-    transform: translateX(-50%);
-  }
-}
-@media screen and (max-width: 400px) {
-  .formcontainer {
-    padding-left: 15px;
-    padding-right: 15px;
-    height: 100%;
-    width: 100%;
-    padding: 0;
-    gap: -1rem;
-  }
-  .leftForm,
-  .rigthForm{
-    padding-left: 15px;
-    padding-right: 15px;
- 
-  }
-  .rigthForm{
-    margin-top: -2rem;
-  }
-  .btn{
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
-    bottom: 1%;
-    position: relative;
-  }
-
-}
+/* You can add more styles as needed */

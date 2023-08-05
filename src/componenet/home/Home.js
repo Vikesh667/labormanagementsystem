@@ -5,7 +5,7 @@ import images from "../../data";
 import { Link } from "react-router-dom";
 const Home = () => {
   const [currentState, setCurrentState] = useState(0);
-  const [color,setColor]=useState(null)
+  const [color, setColor] = useState(null);
   const bgImageStyle = {
     backgroundImage: `url(${images[currentState].url})`,
     backgroundPosition: "center",
@@ -16,18 +16,15 @@ const Home = () => {
   };
   const goToNext = (currentState) => {
     setCurrentState(currentState);
-    
   };
   useEffect(() => {
     const timer = setTimeout(() => {
-      if (currentState === 3 ) {
-     
-        setColor(null)
+      if (currentState === 3) {
+        setCurrentState(0)
       } else {
         setCurrentState(currentState + 1);
-       
       }
-    }, 2000);
+    }, 5000);
     return () => clearTimeout(timer);
   }, [currentState]);
 
@@ -55,8 +52,8 @@ const Home = () => {
       <div className={style.crousel}>
         {images.map((image, currentState) => (
           <span
-            key={currentState} 
-         style= {{backgroundColor:color}}
+            key={currentState}
+            style={{ backgroundColor: color }}
             onClick={() => goToNext(currentState)}
           ></span>
         ))}
