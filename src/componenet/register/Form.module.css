@@ -1,0 +1,196 @@
+.signup {
+  height: 100vh;
+  background-color: aqua;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.formContainer {
+  display: flex;
+  height: 80%;
+  width: 60%;
+  justify-content: center;
+  margin: 40px 0;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+}
+.leftcontainer {
+  height: 100%;
+  width: 100%;
+  flex: 1;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.leftcontainer img {
+  height: 100%;
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.rightcontainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+/* styles.css */
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+  width: 100%;
+}
+
+/* Basic button styles */
+.button {
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Style for the previous button */
+.buttonprev {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Style for the next button */
+.buttonnext {
+  background-color: #28a745;
+  color: #fff;
+}
+
+/* Disable button style */
+.button[disabled] {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Hover effect for buttons */
+.button:hover {
+  filter: brightness(1.1);
+}
+/* styles.css */
+.progressbar {
+  width: 100%;
+  height: 20px;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  margin: 30px;
+}
+
+.progress {
+  height: 100%;
+  background-color: #007bff;
+  border-radius: 10px;
+  transition: width 0.3s ease;
+}
+
+/* Optional text style to show progress percentage */
+.progress-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-weight: bold;
+}
+/* styles.css */
+.link a {
+  font-size: 16px;
+  color: #007bff;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.link a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #007bff;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.link a:hover::after {
+  transform: scaleX(1);
+}
+@media screen and (max-width: 1024px) {
+  .signup {
+    height: 100%;
+  }
+  .formContainer {
+    flex-direction: column;
+    height: 100%;
+    padding: 10px;
+  }
+  .leftcontainer {
+    height: 100%;
+    width: 100%;
+    border-radius: 0;
+  }
+  .leftcontainer img {
+   border-radius: 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  .signup {
+    height: 100%;
+  }
+  .formContainer {
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .leftcontainer {
+    height: 100%;
+    width: 100%;
+    border-radius: 0;
+  }
+  .leftcontainer img {
+    border-radius: 0;
+  }
+  .rightcontainer {
+    height: 100%;
+    width: 100%;
+  }
+}
+@media screen and (max-width:360px) {
+    .signup {
+        height: 100%;
+      }
+      .formContainer {
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        
+      }
+      .leftcontainer {
+        height: 100%;
+        width: 100%;
+        border-radius: 0;
+      }
+      .leftcontainer img {
+        border-radius: 0;
+      }
+      .rightcontainer {
+        height: 100%;
+        width: 100%;
+        
+      }
+}
