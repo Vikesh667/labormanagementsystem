@@ -1,18 +1,24 @@
 import React from "react";
-import style from "./SignUp.module.css"
-const PersonalInfo = () => {
+import style from "./SignUp.module.css";
+const PersonalInfo = ({ formData, setFormData }) => {
   return (
     <div className={style.PersonalInfo}>
-      <input type="text" placeholder="Name..." />
-      <input type="text" placeholder="Age..." />
+      <input
+        type="text"
+        placeholder="Name..."
+        value={formData.name}
+        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+      />
+      <input
+        type="text"
+        placeholder="Age..."
+        value={formData.age}
+        onChange={(e) => setFormData({ ...formData, age: e.target.value })}
+      />
 
-      <select
-        name="gender"
-        // value={formData.gender}
-        // onChange={handleChange}
-        // required
-        // className={style.input}
-      >
+      <select name="gender" value={formData.gender}
+      
+      onChange={(e) => setFormData({ ...formData, gender: e.target.value })}>
         <option value="">Select gender</option>
         <option value="Male">Male</option>
         <option value="Female">Female</option>
