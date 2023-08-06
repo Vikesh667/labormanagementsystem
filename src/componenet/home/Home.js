@@ -1,7 +1,7 @@
 import React from "react";
 import style from "./Home.module.css";
 import { useState, useEffect } from "react";
-import images from "../../data";
+import images from "../../const";
 import { Link } from "react-router-dom";
 const Home = () => {
   const [currentState, setCurrentState] = useState(0);

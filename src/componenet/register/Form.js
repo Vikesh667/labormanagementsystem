@@ -4,6 +4,7 @@ import SignUp from "./SignUp";
 import PersonalInfo from "./PersonalInfo";
 import OtherInfo from "./OtherInfo";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 const Form = () => {
   const [page, setPage] = useState(1);
  const [formData,setFormData]=useState({
@@ -18,7 +19,7 @@ const Form = () => {
   field:""
  })
   const FormTitles = ["Sing Up", "Personal Info", "Other"];
-
+  const navigate=useNavigate()
   const PageDisplay = () => {
     if (page === 0) {
       return <SignUp formData={formData} setFormData={setFormData}/>;
@@ -28,6 +29,33 @@ const Form = () => {
       return <OtherInfo formData={formData} setFormData={setFormData}/>;
     }
   };
+
+
+  const handleSubmin = async (formData) => {
+    try {
+      const res = await fetch("http://localhost:8080/user", {
+        method: "POST",
+        body: JSON.stringify(formData),
+        headers: {
+          'content-type': 'application/json'
+        }
+      });
+  
+      if (!res.ok) {
+        throw new Error('Network response was not ok.');
+      }
+  
+      const responseText = await res.text();
+      alert("Form submitted successfully!")
+      console.log('Response:', responseText); 
+      navigate('/abc')
+      
+    } catch (error) {
+      console.error('Error:', error.message);
+    }
+  };
+  
+  
   return (
     <div className={style.signup}>
       <div className={style.formContainer}>
@@ -59,8 +87,7 @@ const Form = () => {
               i
               onClick={() => {
                 if(page===FormTitles.length-1){
-                     alert("Form Submitted")
-                     
+                     handleSubmin(formData)
                 }else{
                   setPage((currPage) => currPage + 1)}
                 }

@@ -1,0 +1,28 @@
+{
+  "user": [
+    {
+      "email": "vikesh@gmail.com",
+      "phone": "07004514938",
+      "name": "Vikesh Kumar Kushwaha",
+      "age": "25",
+      "gender": "Male",
+      "category": "Category 2",
+      "experience": "3-5 years",
+      "field": "Field 2",
+      "password": "vikesh@123",
+      "id": 1
+    },
+    {
+      "email": "rr@gmail.com",
+      "phone": "985989878",
+      "name": "Sachin Kumar",
+      "age": "24",
+      "gender": "Other",
+      "category": "Category 1",
+      "experience": "1-3 years",
+      "field": "Field 1",
+      "password": "1234",
+      "id": 2
+    }
+  ]
+}
