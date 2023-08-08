@@ -32,27 +32,27 @@ const Form = () => {
 
 
   const handleSubmin = async (formData) => {
-    try {
-      const res = await fetch("http://localhost:8080/user", {
-        method: "POST",
-        body: JSON.stringify(formData),
-        headers: {
-          'content-type': 'application/json'
-        }
-      });
+    // try {
+    //   const res = await fetch("http://localhost:8080/user", {
+    //     method: "POST",
+    //     body: JSON.stringify(formData),
+    //     headers: {
+    //       'content-type': 'application/json'
+    //     }
+    //   });
   
-      if (!res.ok) {
-        throw new Error('Network response was not ok.');
-      }
+    //   if (!res.ok) {
+    //     throw new Error('Network response was not ok.');
+    //   }
   
-      const responseText = await res.text();
-      alert("Form submitted successfully!")
-      console.log('Response:', responseText); 
-      navigate('/dashboard')
+    //   const responseText = await res.text();
+    //   alert("Form submitted successfully!")
+    //   console.log('Response:', responseText); 
+    //   navigate('/dashboard')
       
-    } catch (error) {
-      console.error('Error:', error.message);
-    }
+    // } catch (error) {
+    //   console.error('Error:', error.message);
+    // }
     try {
       localStorage.setItem("user",JSON.stringify(formData))
       alert("Form submitted successfully!")
