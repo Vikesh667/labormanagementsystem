@@ -56,9 +56,10 @@ const Form = () => {
     try {
       localStorage.setItem("user",JSON.stringify(formData))
       alert("Form submitted successfully!")
+      navigate('/dashboard')
     } catch (error) {
        alert("failed to submited")
-        navigate('/dashboard')
+        
     }
   };
   
