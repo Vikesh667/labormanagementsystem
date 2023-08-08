@@ -1,14 +1,14 @@
 import HomePages from "./Pages/HomePages";
 import { Routes, Route } from "react-router-dom";
 import SignUpPage from "./Pages/SignUpPage";
-import Abc from "./componenet/Abc";
+import Dashboard from "./componenet/dashboard/Dashboard";
 function App() {
   return (
     <>
       <Routes>
         <Route path="/" element={<HomePages />} />
         <Route path="/signup" element={<SignUpPage />} />
-        <Route path="/abc" element={<Abc/>}/>
+        <Route path="/dashboard" element={<Dashboard/>}/>
       </Routes>
     </>
   );

@@ -23,6 +23,18 @@
       "field": "Field 1",
       "password": "1234",
       "id": 2
+    },
+    {
+      "email": "v@gmail.com",
+      "phone": "45434535353",
+      "name": "Abhishek Kumar",
+      "age": "22",
+      "gender": "Male",
+      "category": "Category 1",
+      "experience": "Less than 1 year",
+      "field": "Field 1",
+      "password": "vvvv",
+      "id": 3
     }
   ]
 }

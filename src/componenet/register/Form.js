@@ -3,7 +3,7 @@ import style from "./Form.module.css";
 import SignUp from "./SignUp";
 import PersonalInfo from "./PersonalInfo";
 import OtherInfo from "./OtherInfo";
-import { Link } from "react-router-dom";
+import { Link, json } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 const Form = () => {
   const [page, setPage] = useState(1);
@@ -32,26 +32,33 @@ const Form = () => {
 
 
   const handleSubmin = async (formData) => {
-    try {
-      const res = await fetch("http://localhost:8080/user", {
-        method: "POST",
-        body: JSON.stringify(formData),
-        headers: {
-          'content-type': 'application/json'
-        }
-      });
+    // try {
+    //   const res = await fetch("http://localhost:8080/user", {
+    //     method: "POST",
+    //     body: JSON.stringify(formData),
+    //     headers: {
+    //       'content-type': 'application/json'
+    //     }
+    //   });
   
-      if (!res.ok) {
-        throw new Error('Network response was not ok.');
-      }
+    //   if (!res.ok) {
+    //     throw new Error('Network response was not ok.');
+    //   }
   
-      const responseText = await res.text();
-      alert("Form submitted successfully!")
-      console.log('Response:', responseText); 
-      navigate('/abc')
+    //   const responseText = await res.text();
+    //   alert("Form submitted successfully!")
+    //   console.log('Response:', responseText); 
+    //   navigate('/dashboard')
       
+    // } catch (error) {
+    //   console.error('Error:', error.message);
+    // }
+    try {
+      localStorage.setItem("user",JSON.stringify(formData))
+      alert("Form submitted successfully!")
     } catch (error) {
-      console.error('Error:', error.message);
+       alert("failed to submited")
+        navigate('/dashboard')
     }
   };
   
